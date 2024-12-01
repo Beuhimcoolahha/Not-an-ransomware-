@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critical System Alert</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Repair Simulation Screen -->
+  <div id="repair-screen">
+    <h1 class="repair-title">Attempting to Repair...</h1>
+    <p class="repair-message">Gaining access to personal files, documents, and information...</p>
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+    <p id="progress-text">0%</p>
+  </div>
+
+  <!-- Ransomware Screen -->
+  <div id="ransomware-screen" style="display: none;">
+    <h1 class="ransomware-title glitch">Your Files Have Been Encrypted!</h1>
+    <p class="ransomware-message">
+      All your important files have been encrypted. To recover them, you must pay a ransom.
+      <br><br>
+      <strong>Time Left to Pay:</strong> <span id="countdown" class="glitch">24:00:00</span>
+      <br><br>
+      Failure to pay will result in the permanent loss of your data.
+    </p>
+    <div id="file-list">
+      <ul id="file-names"></ul>
+    </div>
+    <p class="instruction">
+      Enter the decryption code to unlock your files:
+    </p>
+    <input type="text" id="unlock-code" placeholder="Enter decryption code">
+    <button onclick="verifyCode()">Decrypt</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
